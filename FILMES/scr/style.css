@@ -1,0 +1,131 @@
+:root {
+    --bg-color: #141414;
+    --card-bg: #1f1f1f;
+    --text-color: #ffffff;
+    --accent-color: #e50914; /* Vermelho Netflix */
+    --text-secondary: #aaa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #000, var(--bg-color));
+}
+
+header h1 {
+    color: var(--accent-color);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Container de Filtros */
+.filtros-container {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.filtro-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filtro-grupo label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.filtros-container select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#btn-filtrar {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#btn-filtrar:hover {
+    background-color: #b80710;
+}
+
+/* Grid de Filmes */
+.filmes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Card do Filme */
+.filme-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.filme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(229, 9, 20, 0.2);
+}
+
+.filme-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.filme-titulo {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.filme-meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+
+.filme-sinopse {
+    font-size: 0.9rem;
+    color: #ddd;
+    line-height: 1.4;
+}

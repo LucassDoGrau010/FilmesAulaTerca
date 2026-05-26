@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CineIndica 🎬</h1>
+        <p>Encontre o filme perfeito para assistir hoje</p>
+    </header>
+
+    <main>
+        <section class="filtros-container">
+            <div class="filtro-grupo">
+                <label for="filtro-genero">Gênero:</label>
+                <select id="filtro-genero">
+                    <option value="todos">Todos os Gêneros</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Animação">Animação</option>
+                    <option value="Terror">Terror</option>
+                </select>
+            </div>
+
+            <div class="filtro-grupo">
+                <label for="filtro-ano">Ano de Lançamento:</label>
+                <select id="filtro-ano">
+                    <option value="todos">Todos os Anos</option>
+                    <option value="2020+">A partir de 2020</option>
+                    <option value="2010-2019">2010 a 2019</option>
+                    <option value="2000-2009">2000 a 2009</option>
+                    <option value="anos90">Anos 90 ou anterior</option>
+                </select>
+            </div>
+            
+            <button id="btn-filtrar">Filtrar Filmes</button>
+        </section>
+
+        <section class="filmes-grid" id="lista-filmes">
+            </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
